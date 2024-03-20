@@ -18,7 +18,7 @@ class MQTTManager extends IMQTTController {
   @override
   void init() {
     getDeviceId();
-    _client = MqttServerClient('push.flows.com.tr', deviceId ?? "unknownDevice");
+    _client = MqttServerClient('YOUR BASE URL', deviceId ?? "unknownDevice");
     _client!.autoReconnect = true;
     _client!.port = 3169;
     _client!.keepAlivePeriod = 20;
